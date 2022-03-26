@@ -1,0 +1,338 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    
+}
+section{
+    padding: 1.5rem;
+    overflow: hidden;
+}
+body{
+    color: white;
+    background-color: rgb(36, 33, 33);
+}
+.nav-header{
+    width: 100%;
+    height: 6rem;
+    background-color: black;
+    
+}
+.nav-container{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: black;
+    position: fixed;
+    
+}
+.brand{
+    display: flex;
+    align-items: center;
+
+}
+.brand h1{
+    color: rgb(131, 125, 125);
+}
+.brand h1 span{
+    color: rgb(57, 57, 138);
+}
+
+/* ========= media for small phone and tablets=========== */
+@media screen and (max-width: 767px){
+    .nav-container{
+        padding: 0 0.5rem;
+    }
+    .menu-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(76px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top:3rem;
+       z-index: 3;
+        row-gap: 3rem;
+        transition: ease 1s;
+    }
+    .show-menu{
+        left: 0;
+    }
+    .menu-container .menu-list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        margin-top: 2rem;
+        font-size: 23px;
+        font-weight: 500;
+    }
+
+    .menu-container .close-btn{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      
+    }
+    .close-btn-font{
+        font-size: 3rem;
+        transition: ease 350ms;
+    }
+    .close-btn-font:hover{
+        cursor: pointer;
+        font-size: 2.9rem;
+    }
+    .social-media i{
+        font-size: 3rem;
+    }
+    .menu-item a{
+        color: white;
+        transition: 0.4s;
+    }
+    .menu-item a:hover{
+        color: blue;
+        cursor: pointer;
+    }
+    .open-btn-font{
+        font-size: 3rem;
+        transition: ease 350ms;
+    }
+    .open-btn-font:hover{
+        cursor: pointer;
+        font-size: 2.9rem;
+    }
+
+    /*================= this section is the first page of the site  */
+
+    .about-author-container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-author-container .div1-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .author-px-div .author-px{
+        width: 30rem;
+    }
+    .author-px-div{
+        background-image: radial-gradient(  rgb(109, 103, 103), black);
+        padding: 2rem;
+        border-radius: 50%;
+
+    }
+    .spec-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0.4rem;
+    }
+    .spec-container h2{
+        color: rgb(84, 84, 238);
+    }
+    .spec-container p{
+        font-size: 1.5rem;
+    }
+    /* =======================  this is for the second part of the site (our services)========== */
+
+    .services-cobtainer{
+        background-color: white;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        color: black;
+        border-radius: 2rem;
+        box-shadow: 0.8rem 0.8rem 0.6rem 0.8rem rgb(68, 68, 173);
+    }
+    .service h2{
+        text-align: center;
+        margin-top: 1.3rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+
+
+    }
+    .service p{
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .service a{
+        background-color: blue;
+        color: white;
+        padding: 0.5rem 1rem;
+      border-radius: 10px;
+      transition: ease-out 0.3s;
+     
+    }
+    .service a:hover{
+        transform: scale(1.098);
+       background-color: rgb(111, 111, 197);
+    }
+    .how-it-work{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    .how-it-work .works{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: linear-gradient(to right, black, white);
+        color: white;
+        padding: 1rem 0.3rem;
+        border-radius: 10px;
+        transition: transform ease-out 0.3s;
+        box-shadow: 0 0 0.6rem black;
+    }
+    .how-it-work .works:hover{
+        transform: scale(1.06);
+        background-color: black;
+    }
+    /* =======this is for the third part of the site(top-client)========== */
+
+    .top-container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+    .top-container h2{
+        text-align: center;
+        font-size: 2rem;
+        background-color: grey;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-radius: 50%;
+        box-shadow: 0 0 1rem blue;
+        animation: button 3s infinite;
+
+    }
+    @keyframes button{
+        0%{
+            box-shadow: 0 0 1rem blue; 
+        }
+        50%{
+            box-shadow: 0 0 2rem blue;
+        }
+    }
+    .top-container .top-image img{
+        width: 100%;
+        border-radius: 1rem;
+        transition: ease-in 0.3s;
+    
+    }
+    .top-container .top-image img:hover{
+        cursor: pointer;
+        transform: scale(0.9);
+    }
+
+    /* =============== this is the fourth part of the site(works done) ===================== */
+
+    .work-container h2{
+        text-align: center;
+        font-size: 2rem;
+        background-color: grey;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-radius: 50%;
+        box-shadow: 0 0 1rem blue;
+        animation: button 3s infinite;
+    }
+    .work-container{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+       
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+    .cards .card img{
+        width: 100%;
+        border-radius: 2rem;
+    }
+    .cards .card{
+        background-color: rgb(129, 76, 76);
+        border-radius: 2rem 2rem 0 0 ;
+        
+    }
+    .cards .card p{
+        color: white;
+        margin-top: 1.4rem;
+        font-size: 1.5rem;
+    }
+
+    /* ======================for the fifth part of the site(forms)=============== */
+    .form-div input{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        height: 2.5rem;
+        border-radius: 10px;
+        padding-left: 2rem;
+    }
+    .form-container{
+        padding: 1.2rem;
+        background-image: radial-gradient( rgb(115, 194, 115),white);
+        border-radius: 10px;
+    }
+    .form-container h2{
+        color: brown;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .form-container form label{
+        color: black;
+        font-weight: 600;
+    }
+    .form-div{
+        margin-bottom: 1.2rem;
+    }
+    form button{
+        padding: 0.3rem 1rem;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        transition: ease 0.3s;
+    }
+    form button:hover{
+        background-color: green;
+    }
+    .form-container p{
+        font-size: 1.4rem;
+        color: black;
+        margin-bottom: 1rem;
+    }
+
+    /* ==================== anout the second to last of the site ==================== */
+
+    .last-pix-container img{
+        width: 100%;
+    }
+
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.4rem;
+        justify-content: center;
+        align-items: center;
+        
+        color: white;
+    }
+
+}
